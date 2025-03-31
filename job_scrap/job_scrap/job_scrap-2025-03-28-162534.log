@@ -1,0 +1,61 @@
+2025-03-28 16:25:34,551      INFO  25860 --- [MainThread] [scrapy.utils.log] Scrapy 2.12.0 started (bot: job_scrap_20250328162534)
+2025-03-28 16:25:34,555      INFO  25860 --- [MainThread] [scrapy.utils.log] Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.11.0, Python 3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)], pyOpenSSL 24.3.0 (OpenSSL 3.3.2 3 Sep 2024), cryptography 43.0.1, Platform Windows-10-10.0.17763-SP0
+2025-03-28 16:25:34,564      INFO  25860 --- [MainThread] [job_spider] self.custom_settings : None
+2025-03-28 16:25:34,564      INFO  25860 --- [MainThread] [job_spider] kwargs : {}
+2025-03-28 16:25:34,565      INFO  25860 --- [MainThread] [scrapy.addons] Enabled addons:
+[]
+2025-03-28 16:25:34,566     DEBUG  25860 --- [MainThread] [asyncio] Using selector: SelectSelector
+2025-03-28 16:25:34,568     DEBUG  25860 --- [MainThread] [scrapy.utils.log] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-03-28 16:25:34,568     DEBUG  25860 --- [MainThread] [scrapy.utils.log] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-03-28 16:25:34,568     DEBUG  25860 --- [MainThread] [scrapy.utils.log] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-03-28 16:25:34,568     DEBUG  25860 --- [MainThread] [scrapy.utils.log] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-03-28 16:25:34,575      INFO  25860 --- [MainThread] [scrapy.extensions.telnet] Telnet Password: 4f31846c6a221770
+2025-03-28 16:25:34,590      INFO  25860 --- [MainThread] [scrapy.middleware] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-03-28 16:25:34,590      INFO  25860 --- [MainThread] [scrapy.crawler] Overridden settings:
+{'BOT_NAME': 'job_scrap_20250328162534',
+ 'CONCURRENT_REQUESTS': 1000,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'job_scrap.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['job_scrap.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2025-03-28 16:25:35,458      INFO  25860 --- [MainThread] [scrapy.middleware] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-03-28 16:25:35,466      INFO  25860 --- [MainThread] [scrapy.middleware] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-03-28 16:25:35,466      INFO  25860 --- [MainThread] [scrapy.middleware] Enabled item pipelines:
+[]
+2025-03-28 16:25:35,466      INFO  25860 --- [MainThread] [scrapy.core.engine] Spider opened
+2025-03-28 16:25:35,592      INFO  25860 --- [MainThread] [scrapy.extensions.logstats] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-03-28 16:25:35,595      INFO  25860 --- [MainThread] [scrapy.extensions.telnet] Telnet console listening on 127.0.0.1:6023
+2025-03-28 16:25:35,803     DEBUG  25860 --- [MainThread] [scrapy.core.engine] Crawled (200) <GET https://www.infotech.com.hk/robots.txt> (referer: None)
+2025-03-28 16:25:35,804     DEBUG  25860 --- [MainThread] [protego] Rule at line 4 without any user agent to enforce it on.
+2025-03-28 16:25:35,804     DEBUG  25860 --- [MainThread] [protego] Rule at line 65 without any user agent to enforce it on.
+2025-03-28 16:25:35,804     DEBUG  25860 --- [MainThread] [protego] Rule at line 66 without any user agent to enforce it on.
+2025-03-28 16:25:35,805     DEBUG  25860 --- [MainThread] [protego] Rule at line 67 without any user agent to enforce it on.
+2025-03-28 16:25:35,805     DEBUG  25860 --- [MainThread] [protego] Rule at line 68 without any user agent to enforce it on.
+2025-03-28 16:25:35,805     DEBUG  25860 --- [MainThread] [protego] Rule at line 202 without any user agent to enforce it on.
+2025-03-28 16:25:36,080     DEBUG  25860 --- [MainThread] [scrapy.core.engine] Crawled (200) <GET https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList> (referer: None)
+2025-03-28 16:25:36,185     DEBUG  25860 --- [MainThread] [job_spider] parse ...
+2025-03-28 16:25:36,637     DEBUG  25860 --- [MainThread] [scrapy.core.engine] Crawled (200) <GET https://www.infotech.com.hk/itjs/job/fe-view.do?method=feView&jjKey=33709> (referer: https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList)
+2025-03-28 16:25:36,744     DEBUG  25860 --- [MainThread] [job_spider] parseDetails ... https://www.infotech.com.hk/itjs/job/fe-view.do?method=feView&jjKey=33709.
+2025-03-28 16:25:36,745     DEBUG  25860 --- [MainThread] [job_spider] job_key is : 33709
