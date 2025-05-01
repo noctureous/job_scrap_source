@@ -1,0 +1,133 @@
+2025-04-10 09:34:05,164      INFO  76176 --- [MainThread] [scrapy.utils.log] Scrapy 2.12.0 started (bot: job_scrap_20250410093405)
+2025-04-10 09:34:05,277      INFO  76176 --- [MainThread] [scrapy.utils.log] Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.3.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.2, Platform Windows-11-10.0.22631-SP0
+2025-04-10 09:34:05,282      INFO  76176 --- [MainThread] [job_spider] self.custom_settings : None
+2025-04-10 09:34:05,282      INFO  76176 --- [MainThread] [job_spider] kwargs : {}
+2025-04-10 09:34:05,283      INFO  76176 --- [MainThread] [scrapy.addons] Enabled addons:
+[]
+2025-04-10 09:34:05,283     DEBUG  76176 --- [MainThread] [asyncio] Using selector: SelectSelector
+2025-04-10 09:34:05,286     DEBUG  76176 --- [MainThread] [scrapy.utils.log] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-10 09:34:05,286     DEBUG  76176 --- [MainThread] [scrapy.utils.log] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-04-10 09:34:05,286     DEBUG  76176 --- [MainThread] [scrapy.utils.log] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-10 09:34:05,286     DEBUG  76176 --- [MainThread] [scrapy.utils.log] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-04-10 09:34:05,293      INFO  76176 --- [MainThread] [scrapy.extensions.telnet] Telnet Password: da548476f44fe0c1
+2025-04-10 09:34:05,310      INFO  76176 --- [MainThread] [scrapy.middleware] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-04-10 09:34:05,311      INFO  76176 --- [MainThread] [scrapy.crawler] Overridden settings:
+{'BOT_NAME': 'job_scrap_20250410093405',
+ 'CONCURRENT_REQUESTS': 1000,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'job_scrap.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['job_scrap.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2025-04-10 09:34:06,086      INFO  76176 --- [MainThread] [scrapy.middleware] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-10 09:34:06,110      INFO  76176 --- [MainThread] [scrapy.middleware] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-10 09:34:06,123      INFO  76176 --- [MainThread] [scrapy.middleware] Enabled item pipelines:
+[]
+2025-04-10 09:34:06,123      INFO  76176 --- [MainThread] [scrapy.core.engine] Spider opened
+2025-04-10 09:34:06,175      INFO  76176 --- [MainThread] [scrapy.extensions.logstats] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-10 09:34:06,176      INFO  76176 --- [MainThread] [scrapy.extensions.telnet] Telnet console listening on 127.0.0.1:6023
+2025-04-10 09:34:06,208     DEBUG  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Retrying <GET https://www.infotech.com.hk/robots.txt> (failed 1 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,212     DEBUG  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Retrying <GET https://www.infotech.com.hk/robots.txt> (failed 2 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,215     ERROR  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Gave up retrying <GET https://www.infotech.com.hk/robots.txt> (failed 3 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,215     ERROR  76176 --- [MainThread] [scrapy.downloadermiddlewares.robotstxt] Error downloading <GET https://www.infotech.com.hk/robots.txt>: DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+Traceback (most recent call last):
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+        cast(Failure, result).throwExceptionIntoGenerator, gen
+    )
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+        current.result, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\endpoints.py", line 1061, in startConnectionAttempts
+    raise error.DNSLookupError(
+        f"no results for hostname lookup: {self._hostText}"
+    )
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,324     DEBUG  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Retrying <GET https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList> (failed 1 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,326     DEBUG  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Retrying <GET https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList> (failed 2 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,329     ERROR  76176 --- [MainThread] [scrapy.downloadermiddlewares.retry] Gave up retrying <GET https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList> (failed 3 times): DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,437     ERROR  76176 --- [MainThread] [scrapy.core.scraper] Error downloading <GET https://www.infotech.com.hk/itjs/job/fe-search.do?method=feList>
+Traceback (most recent call last):
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+        cast(Failure, result).throwExceptionIntoGenerator, gen
+    )
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+        current.result, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\wei_k\AppData\Local\Programs\Python\Python313\Lib\site-packages\twisted\internet\endpoints.py", line 1061, in startConnectionAttempts
+    raise error.DNSLookupError(
+        f"no results for hostname lookup: {self._hostText}"
+    )
+twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.infotech.com.hk.
+2025-04-10 09:34:06,546      INFO  76176 --- [MainThread] [scrapy.core.engine] Closing spider (finished)
+2025-04-10 09:34:06,591      INFO  76176 --- [MainThread] [job_spider] Spider started closed: finished
+2025-04-10 09:34:11,592      INFO  76176 --- [MainThread] [job_spider] Spider closing: finished
+2025-04-10 09:34:11,593     DEBUG  76176 --- [MainThread] [job_spider] parse completed
+2025-04-10 09:34:11,593     DEBUG  76176 --- [MainThread] [job_spider] parse bk_checkfile_path : C:\interview\job_scrap\job_scrap_source\job_scrap\job_scrap_records\job_ads_20250410093405.csv
+2025-04-10 09:34:11,593      INFO  76176 --- [MainThread] [job_spider] Spider completed closing: finished
+2025-04-10 09:34:11,594      INFO  76176 --- [MainThread] [scrapy.statscollectors] Dumping Scrapy stats:
+{'downloader/exception_count': 6,
+ 'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 6,
+ 'downloader/request_bytes': 1455,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'elapsed_time_seconds': 5.418624,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 10, 1, 34, 11, 593768, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/ERROR': 4,
+ 'log_count/INFO': 13,
+ 'responses_per_minute': None,
+ 'retry/count': 4,
+ 'retry/max_reached': 2,
+ 'retry/reason_count/twisted.internet.error.DNSLookupError': 4,
+ "robotstxt/exception_count/<class 'twisted.internet.error.DNSLookupError'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2025, 4, 10, 1, 34, 6, 175144, tzinfo=datetime.timezone.utc)}
+2025-04-10 09:34:11,595      INFO  76176 --- [MainThread] [scrapy.core.engine] Spider closed (finished)

@@ -23,7 +23,7 @@ from email.header import Header
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from smtplib import SMTP
+from smtplib import SMTP, SMTP_SSL
 import json
 import hashlib
 
@@ -84,8 +84,12 @@ class JobSpider(scrapy.Spider):
         global smtp_hostname
         global smtp_port
 
-        smtp_hostname='10.63.113.88'
-        smtp_port=25
+        # smtp_hostname='10.63.113.88'
+        # smtp_port=25
+        smtp_hostname='smtp.gmail.com'
+        smtp_port=465
+        sender_email = "weikwan214@gmail.com"
+        sender_password = "kcfuiipahudapoem"  # Use App Password if 2FA is enabled
 
         job_data_list=[]
 
@@ -153,7 +157,7 @@ class JobSpider(scrapy.Spider):
     #         '',
     #         attachment_path
     #     )
-    def send_email_with_restricted_marking_and_attachment(self, sender, team_name, recipients, cc_recipients, subject, body, attachment_paths, isEncrypt=False,smtp_hostname='10.63.113.88', smtp_port=25):
+    def send_email_with_restricted_marking_and_attachment(self, sender, team_name, recipients, cc_recipients, subject, body, attachment_paths, isEncrypt=False,smtp_hostname='smtp.gmail.com', smtp_port=465):
         global logger
         # Create the email message
         try :
@@ -187,7 +191,11 @@ class JobSpider(scrapy.Spider):
                         msg.attach(attachment)
 
                 # Send the email
-                with SMTP(smtp_hostname, smtp_port) as smtp:
+                # with SMTP(smtp_hostname, smtp_port) as smtp:
+                with SMTP_SSL(smtp_hostname, smtp_port, timeout=30) as smtp:
+                    sender_password = "kcfuiipahudapoem"  # Use App Password if 2FA is enabled
+
+                    smtp.login(sender, sender_password)
                     smtp.send_message(msg);logger.info(f"sent email to {recipients} and {cc_recipients}. Attached File to email {attachment_path}")
 
         except Exception as e:logger.error(traceback.format_exc());logger.error(e)
@@ -447,8 +455,10 @@ class JobSpider(scrapy.Spider):
         global smtp_hostname
         global smtp_port
 
-        smtp_hostname='10.63.113.88'
-        smtp_port=25
+        # smtp_hostname='10.63.113.88'
+        # smtp_port=25
+        smtp_hostname='smtp.gmail.com'
+        smtp_port=465
 
 
 
@@ -518,16 +528,18 @@ class JobSpider(scrapy.Spider):
 
 
             receipt_list=[
-                'jkwei@try.gov.hk'
-                ,'hmho@try.gov.hk'
-                ,'ryhwong@try.gov.hk'
+                'weikwan214@gmail.com'
+                ,'ho.homer@gmail.com'
+                # 'jkwei@try.gov.hk'
+                # ,'hmho@try.gov.hk'
+                # ,'ryhwong@try.gov.hk'
                           ]
             if os.path.isfile(bk_checkfile_path) \
                 and os.path.lexists(bk_checkfile_path):
                     self.diff_two_csvs_files(bk_checkfile_path, checkfile_path, chg_checkfile_path)
                     # smtp_sender='cprsoperator@try.gov.hk'
                     if True :
-                        smtp_sender='jkwei@try.gov.hk'
+                        smtp_sender='weikwan214@gmail.com'
                         self.send_email_with_restricted_marking_and_attachment(
                             smtp_sender,
                             '',
