@@ -88,8 +88,8 @@ class JobSpider(scrapy.Spider):
         # smtp_port=25
         smtp_hostname='smtp.gmail.com'
         smtp_port=465
-        sender_email = "weikwan214@gmail.com"
-        sender_password = "kcfuiipahudapoem"  # Use App Password if 2FA is enabled
+        sender_email = "" # Your sender email.
+        sender_password = ""  # Use App Password if 2FA is enabled
 
         job_data_list=[]
 
@@ -528,11 +528,7 @@ class JobSpider(scrapy.Spider):
 
 
             receipt_list=[
-                'weikwan214@gmail.com'
-                ,'ho.homer@gmail.com'
-                # 'jkwei@try.gov.hk'
-                # ,'hmho@try.gov.hk'
-                # ,'ryhwong@try.gov.hk'
+                '' # receipt email list
                           ]
             if os.path.isfile(bk_checkfile_path) \
                 and os.path.lexists(bk_checkfile_path):
